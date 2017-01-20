@@ -1,0 +1,31 @@
+package com.crime;
+
+import java.awt.AWTException;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import com.csvreader.CsvReader;
+
+public class Main {
+		private static String data=null;
+	public static void main(String[] args) throws AWTException, InterruptedException, IOException 
+	{
+		String url=null;
+		int i=0;
+//		url="https://www.geo.tv/latest-news/";
+/*		url="LatestNewsgeo.tv.htm";
+		Crawl c=new Crawl();
+		c.news2(url);
+		c.parse();*/
+		Parse p=new Parse();
+		try {
+			p.parse2("crime1.csv");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+
+}

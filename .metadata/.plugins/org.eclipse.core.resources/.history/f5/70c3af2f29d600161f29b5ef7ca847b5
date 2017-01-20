@@ -1,0 +1,10 @@
+package edu.lehigh.swat.bench.uba;
+
+public class run {
+
+	public static void main(String[] args) {
+			Generator g=new Generator();
+			
+	}
+
+}

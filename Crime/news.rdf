@@ -1,0 +1,1080 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#"
+     xml:base="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55"
+     xmlns:test="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:untitled-ontology-55="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Event -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Event"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#cityCrimes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#cityCrimes">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#hasLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#crimeLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#crimeLocation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#dateCrime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#dateCrime">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#occurOn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#hasLocation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Location"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#inSeason -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#inSeason">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Stat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#news -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#news">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#occurOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#occurOn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Date"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Arrested -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Arrested"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Blasphemy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Blasphemy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Corruption -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Corruption"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#CyberCrime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#CyberCrime"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Date"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Date1 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Date1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Extorsion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Extorsion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Fraud -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Fraud"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#HumanTrafficking -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#HumanTrafficking"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Injured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Injured"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Kidnap -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Kidnap">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Killed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Killed"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Major -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Major"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Minor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Minor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Robery -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Robery"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Smugling -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Smugling"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#SpecialEvent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#SpecialEvent"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Sucide -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Sucide"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Terrorist -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Terrorist"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#newsTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#newsTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#noOfCriminals -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#noOfCriminals">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#noOfVictims -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#noOfVictims">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Date -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Date">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Location">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Stat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Stat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55# -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Location"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <cityCrimes rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News893"/>
+        <cityCrimes rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News894"/>
+        <cityCrimes rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News895"/>
+        <cityCrimes rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News896"/>
+        <cityCrimes rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News897"/>
+        <cityCrimes rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News899"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#April -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#April"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#August -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#August"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Autumn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Autumn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Stat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#December -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#December">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Date"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <dateCrime rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News892"/>
+        <dateCrime rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News893"/>
+        <dateCrime rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News894"/>
+        <dateCrime rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News895"/>
+        <dateCrime rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News896"/>
+        <dateCrime rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News897"/>
+        <dateCrime rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News898"/>
+        <dateCrime rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News899"/>
+        <dateCrime rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News900"/>
+        <dateCrime rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News901"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#February -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#February"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Hafizabad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Hafizabad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Location"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <cityCrimes rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News900"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#January -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#January">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Date"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#July -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#July"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#June -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#June"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Lahore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Lahore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Location"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <cityCrimes rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News898"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Malta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Malta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Location"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <cityCrimes rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News892"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#March -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#March"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#May -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#May"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News892 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News892">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <hasLocation rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Malta"/>
+        <inSeason rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Winter"/>
+        <occurOn rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#December"/>
+        <Arrested rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Arrested>
+        <Date>December 23, 2016</Date>
+        <Injured rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Injured>
+        <Kidnap rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Kidnap>
+        <Killed rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Killed>
+        <newsTitle>Hijacked Libyan plane lands in Malta with 118 people aboard: media</newsTitle>
+        <noOfVictims rdf:datatype="http://www.w3.org/2001/XMLSchema#long">118</noOfVictims>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News893 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News893">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <hasLocation rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#"/>
+        <inSeason rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Winter"/>
+        <occurOn rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#December"/>
+        <Arrested rdf:datatype="http://www.w3.org/2001/XMLSchema#long">5</Arrested>
+        <Date>December 23, 2016</Date>
+        <Injured rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Injured>
+        <Kidnap rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Kidnap>
+        <Killed rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Killed>
+        <newsTitle>Rangers issue details of raids on offices of Zardari&apos;s close aide</newsTitle>
+        <noOfVictims rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</noOfVictims>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News894 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News894">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <hasLocation rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#"/>
+        <inSeason rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Winter"/>
+        <occurOn rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#December"/>
+        <Arrested rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Arrested>
+        <Date>December 23, 2016</Date>
+        <Date1>December 23, 2016</Date1>
+        <Injured rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Injured>
+        <Kidnap rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Kidnap>
+        <Killed rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</Killed>
+        <newsTitle>Italy confirms Berlin truck attack suspect shot dead in Milan</newsTitle>
+        <noOfVictims rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</noOfVictims>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News895 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News895">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <hasLocation rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#"/>
+        <inSeason rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Winter"/>
+        <occurOn rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#December"/>
+        <Arrested rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1</Arrested>
+        <Date>December 23, 2016</Date>
+        <Injured rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Injured>
+        <Kidnap rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Kidnap>
+        <Killed rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Killed>
+        <newsTitle>Axact executive could face 20 years in US prison over fake degree scam</newsTitle>
+        <noOfVictims rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</noOfVictims>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News896 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News896">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <hasLocation rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#"/>
+        <inSeason rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Winter"/>
+        <occurOn rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#December"/>
+        <Arrested rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Arrested>
+        <Date>December 23, 2016</Date>
+        <Injured rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Injured>
+        <Kidnap rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Kidnap>
+        <Killed rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Killed>
+        <newsTitle>Southeast Asia on Christmas alert after foiled bomb plots</newsTitle>
+        <noOfVictims rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</noOfVictims>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News897 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News897">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <hasLocation rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#"/>
+        <inSeason rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Winter"/>
+        <occurOn rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#December"/>
+        <Arrested rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</Arrested>
+        <Date>December 23, 2016</Date>
+        <Injured rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Injured>
+        <Kidnap rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Kidnap>
+        <Killed rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Killed>
+        <newsTitle>Two arrested in Germany over shopping mall attack plot: police</newsTitle>
+        <noOfVictims rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</noOfVictims>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News898 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News898">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <hasLocation rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Lahore"/>
+        <inSeason rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Winter"/>
+        <occurOn rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#December"/>
+        <Arrested rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Arrested>
+        <Date>December 23, 2016</Date>
+        <Injured rdf:datatype="http://www.w3.org/2001/XMLSchema#long">2</Injured>
+        <Kidnap rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Kidnap>
+        <Killed rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</Killed>
+        <newsTitle>Mother, two daughters killed in house fire in Lahore, two others injured</newsTitle>
+        <noOfVictims rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</noOfVictims>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News899 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News899">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <hasLocation rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#"/>
+        <inSeason rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Winter"/>
+        <occurOn rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#December"/>
+        <Arrested rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7</Arrested>
+        <Date>December 23, 2016</Date>
+        <Injured rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Injured>
+        <Kidnap rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Kidnap>
+        <Killed rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Killed>
+        <newsTitle>Christmas Day terror plot foiled in Australia, seven arrested: police</newsTitle>
+        <noOfVictims rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</noOfVictims>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News900 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News900">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <hasLocation rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Hafizabad"/>
+        <inSeason rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Winter"/>
+        <occurOn rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#December"/>
+        <Arrested rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Arrested>
+        <Date>December 23, 2016</Date>
+        <Injured rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Injured>
+        <Kidnap rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Kidnap>
+        <Killed rdf:datatype="http://www.w3.org/2001/XMLSchema#long">3</Killed>
+        <newsTitle>Unidentified men kill three at a house in Hafizabad</newsTitle>
+        <noOfVictims rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</noOfVictims>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News901 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News901">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <hasLocation rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Sharakpur"/>
+        <inSeason rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Winter"/>
+        <occurOn rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#December"/>
+        <Arrested rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Arrested>
+        <Date>December 23, 2016</Date>
+        <Injured rdf:datatype="http://www.w3.org/2001/XMLSchema#long">15</Injured>
+        <Kidnap rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</Kidnap>
+        <Killed rdf:datatype="http://www.w3.org/2001/XMLSchema#long">4</Killed>
+        <newsTitle>Four killed as bus collides with truck in Shikarpur</newsTitle>
+        <noOfVictims rdf:datatype="http://www.w3.org/2001/XMLSchema#long">0</noOfVictims>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#November -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#November"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#October -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#October"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#September -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#September"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Sharakpur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Sharakpur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Location"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <cityCrimes rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News901"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Special -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Special"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Spring -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Spring">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Stat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Summer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Summer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Stat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Winter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Winter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#News"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Stat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#occurOn"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#March"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#occurOn"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#April"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#inSeason"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Spring"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#occurOn"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#May"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#occurOn"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#June"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#occurOn"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#July"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#occurOn"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#August"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#inSeason"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Summer"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#occurOn"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#January"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#occurOn"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#December"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#occurOn"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#November"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#occurOn"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#February"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#inSeason"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Winter"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Crime"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#occurOn"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#September"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#occurOn"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#October"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#inSeason"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Autumn"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Date1"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#Major"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

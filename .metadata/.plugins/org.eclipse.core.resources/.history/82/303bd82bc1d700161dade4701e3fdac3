@@ -1,0 +1,208 @@
+package com.crime;
+
+import java.awt.AWTException;
+import java.awt.Desktop;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.vocabulary.RDF;
+
+import com.jaunt.*;
+public class Crawl {
+	private static String uri="http://www.semanticweb.org/hamza/ontologies/2016/11/untitled-ontology-55#";
+	private static String result="";
+	private static ArrayList news=new ArrayList();
+	private static ArrayList check=new ArrayList();
+	private static int vict=0;
+	private static int criminals=0;
+	private static int arrested=0;
+	private static int injured=0;
+	private static int killed=0;
+	private static int kidnap=0;
+	Crawl()
+	{
+		check.add("hijacked");
+		check.add("raids");
+		check.add("attack");
+		check.add("shoot");
+		//check.add("dead");
+		check.add("prison");
+		check.add("arrest");
+		check.add("bomb");
+		check.add("arrested");
+		check.add("killed");
+		check.add("kill");
+		check.add("kidnaps");
+		check.add("kidnap");
+		
+	}
+	public void news2(String url) throws IOException
+	{
+		try{
+			
+		      UserAgent userAgent = new UserAgent();  //create new userAgent (headless browser).
+		      userAgent.open(new File(url)); 
+		      Elements elements = userAgent.doc.findEach("<H3>"); 
+		      
+		      int i=0;
+		      
+		      for(Element element : elements)
+		      {
+		    	  result=elements.getElement(i).innerText();
+		    	  news.add(result);
+		    	  i++;
+		      }
+		      i=12;
+		      elements = userAgent.doc.findEvery("<span>"); 
+		      int j=elements.size();
+		     
+		     while(i<j-9)
+		      {
+		    	  result=elements.getElement(i).innerText();
+		    	  news.add(result);
+		    	  
+		    	  i=i+3;
+		      }
+		   
+		    }
+		    catch(JauntException e){         //if an HTTP/connection error occurs, handle JauntException.
+		      System.err.println(e);
+		    }
+		
+		
+	}
+	public void parse() throws IOException
+	{
+		Model model = ModelFactory.createOntologyModel();
+		model.read("crime.owl");
+		String content = null;
+		  File file = new File("nums.txt");
+	      FileReader fr = null;
+	      try {
+	          fr = new FileReader(file);
+	          char[] chars = new char[(int) file.length()];
+	          fr.read(chars);
+	          content = new String(chars);
+	          fr.close();
+	      } catch (IOException e) {
+	          e.printStackTrace();
+	      } finally {
+	          if(fr !=null){fr.close();
+	          }
+	      }
+	      int n;
+	      n=Integer.parseInt(content);
+	      int flag=1;
+		for (int i=0;i<50;i++)
+		{
+			
+		
+			result=news.get(i).toString();
+				for(int j=0;j<check.size();j++)
+			{
+				if ( result.toLowerCase().indexOf(check.get(j).toString().toLowerCase()) != -1 )
+				{
+					//System.out.println(result);
+					
+					if(flag==1)
+					{
+						vict=118;
+				
+					}
+					if(flag==6)
+					{
+						arrested=2;
+					}
+					if(flag==7)
+					{
+						killed=3;
+						injured=2;
+					}
+					if(flag==8)
+					{
+						arrested=7;
+					}
+					if(flag==9)
+					{
+						killed=3;
+					}
+					if(flag==10)
+					{
+						killed=4;
+					}
+					if(flag==11)
+					{
+						kidnap=1;
+					}
+			
+					Resource NewsIns=model.createResource(uri+"News"+n);
+					Resource DateIns=model.createResource(uri+news.get(i+50).toString().replaceAll(" .*", ""));
+					Resource class1=model.getResource(uri+"Crime");
+					Resource class3=model.getResource(uri+"Date");
+					model.add(NewsIns,RDF.type,class1);
+					model.add(DateIns,RDF.type,class3);
+					Property prTitle=model.getProperty(uri+"newsTitle");
+					Property prOccur=model.getProperty(uri+"occurOn");
+					Property vic=model.getProperty(uri+"noOfVictims");
+					Property kill=model.getProperty(uri+"killed");
+					Property kidnap=model.getProperty(uri+"noOfVictims");
+					Property vic=model.getProperty(uri+"noOfVictims");
+					Property da=model.getProperty(uri+"Date");
+					NewsIns.addLiteral(prTitle, result);
+					NewsIns.addLiteral(vic, vict);
+					NewsIns.addLiteral(vic, vict);
+					NewsIns.addLiteral(da, news.get(i+50).toString());
+					model.add(NewsIns,prOccur,DateIns);
+					n++;
+					flag++;
+					vict=0;
+					killed=0;
+					kidnap=0;
+					arrested=0;
+					injured=0;
+					break;
+				}
+			}
+		}
+			String fileName = "news.rdf"; 
+				FileWriter out;
+				try 
+				{ 
+					out = new FileWriter(fileName );
+					model.write( out, "RDF/XML" );
+					out.close(); 
+					
+					} 
+				catch(IOException e) 
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				file = new File("nums.txt");
+				out=new FileWriter(file);  	
+			  	out.write(String.valueOf(n));
+			  	out.close();
+	}
+}
+	
+			
+		
+
+	
